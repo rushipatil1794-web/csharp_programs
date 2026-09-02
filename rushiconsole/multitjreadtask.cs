@@ -23,15 +23,17 @@ namespace rushiconsole
 
                 }
                 Console.WriteLine();
+                //Thread.Sleep(1000);
             }
-            Thread.Sleep(1000);
+
         }
     }
     class rhombus
     {
         public void rhombusshape()
         {
-            for(int i = 1;i <=4;i++)
+            Thread.Sleep(1000);
+            for (int i = 1;i <=4;i++)
             {
                 for(int space=2;space<=i;space++)
                 {
@@ -42,15 +44,17 @@ namespace rushiconsole
                     Console.Write(i);
                 }
                 Console.WriteLine();
+               
             }
-            Thread.Sleep(2000);
+
         }
     }
     class pyramid
     {
         public void pyramidshape()
         {
-            for(int i = 1; i <= 3; i++)
+            Thread.Sleep(3000);
+            for (int i = 1; i <= 3; i++)
             {
                 for(int space = 3; space >= i; space--)
                 {
@@ -61,16 +65,17 @@ namespace rushiconsole
                     Console.Write("* ");
                 }
                 Console.WriteLine();
+                
             }
-            Thread.Sleep(3000);
+            
         }
     }
     internal class multitjreadtask
     {
         public static void Main(string[] args)
         {
-           rightangle r1= new rightangle();
-            //r1.rightangletrangle();
+            rightangle r1 = new rightangle();
+           // r1.rightangletrangle();
             rhombus r2 = new rhombus();
             //r2.rhombusshape();
             pyramid p1 = new pyramid();
@@ -80,11 +85,11 @@ namespace rushiconsole
            // t1.Join();
             Thread t2 = new Thread(new ThreadStart(r2.rhombusshape));
             t2.Start();
-            //t2.Join();
+           // t2.Join();
             Thread t3 = new Thread(new ThreadStart(p1.pyramidshape));
             t3.Start();
            // t3.Join();
-           
+
         }
 
     }
