@@ -13,15 +13,15 @@
 //            Console.WriteLine("Store Multiple Employe");
 //            Console.WriteLine("Enter Employe Count");
 //            int emp_count = int.Parse(Console.ReadLine());
-
-//            for (int i = 0; i < emp_count; i++)
+//            int i = 0;
+//            while (i < emp_count)
 //            {
 //                Console.WriteLine("Enter Employe Id :");
 //                int empid = int.Parse(Console.ReadLine());
 //                if (ls.Contains(empid))
 //                {
 //                    Console.WriteLine("Employee ID already exists!");
-//                    continue;
+//                    i--;
 //                }
 //                else
 //                {
@@ -38,14 +38,15 @@
 //                    ls.Add(empsalary);
 
 //                }
-
+//                i++;
 //            }
+           
 //            Console.WriteLine("Employee Details Added Successfully.");
 //            Console.WriteLine("____________________________________");
 //            Console.WriteLine("Print Empolye Details :");
-//            for (int i = 0; i < ls.Count; i++)
+//            for (int a = 0; a < ls.Count; a++)
 //            {
-//                Console.WriteLine(ls[i]);
+//                Console.WriteLine(ls[a]);
 //            }
 //        }
 //    }
